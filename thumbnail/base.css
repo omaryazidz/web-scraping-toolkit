@@ -1,0 +1,51 @@
+/* Sistem desain thumbnail Fastwork (seri portofolio). Warna per project di-set lewat :root di slides.html */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:#fff}
+.slide{position:relative;width:1280px;height:720px;overflow:hidden;
+  background:radial-gradient(900px 620px at 108% -12%,var(--blob1) 0%,transparent 60%),radial-gradient(700px 520px at -12% 112%,var(--blob2) 0%,transparent 60%),var(--bg)}
+.slide[hidden]{display:none}
+.abs{position:absolute}
+
+.eyebrow{position:absolute;left:64px;top:56px;display:flex;align-items:center;gap:10px;font:700 18px 'Plus Jakarta Sans';
+  background:#fff;padding:9px 18px 9px 14px;border-radius:999px;box-shadow:0 6px 18px -8px var(--shadow)}
+.eyebrow i{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+h1{position:absolute;left:60px;top:118px;font:800 88px/1.0 'Plus Jakarta Sans';letter-spacing:-3px}
+h1 em,h2 em,.gtitle em{font-style:normal;color:var(--accent);position:relative;display:inline-block}
+h1 em svg{position:absolute;left:-6px;bottom:-14px;width:calc(100% + 12px);height:26px;overflow:visible}
+.sub{position:absolute;left:64px;width:560px;font:500 25px/1.42 'Plus Jakarta Sans';color:var(--ink2)}
+.sub b{font-weight:700;color:var(--ink)}
+.who{position:absolute;left:64px;bottom:42px;font:600 18px 'Plus Jakarta Sans';color:var(--muted)}
+
+.card{position:absolute;background:#fff;border-radius:30px;padding:26px 28px;
+  box-shadow:0 40px 70px -30px var(--shadow),0 10px 24px -10px var(--shadow2)}
+.ctitle{font:700 14px 'JetBrains Mono';letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin:0 0 14px 2px}
+.mono{font-family:'JetBrains Mono'}
+.muted{color:var(--muted)}
+
+.badge{position:absolute;width:170px;height:170px;border-radius:50%;background:var(--accent);color:#fff;transform:rotate(-9deg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 22px 40px -16px var(--shadow);text-align:center}
+.badge b{font:800 48px/1 'Plus Jakarta Sans';letter-spacing:-1.5px}
+.badge span{font:700 15px/1.25 'Plus Jakarta Sans';margin-top:6px}
+.chip{position:absolute;display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;border-radius:20px;padding:14px 20px;
+  box-shadow:0 24px 40px -18px rgba(20,20,30,.55);font:500 17px 'Plus Jakarta Sans'}
+.chip b{font:800 21px 'Plus Jakarta Sans';color:var(--chipb)}
+.note{position:absolute;font:700 30px/1.05 'Caveat';color:var(--accent);z-index:3}
+.note svg{position:absolute;overflow:visible}
+.pill{display:inline-block;font:700 14px 'JetBrains Mono';padding:5px 11px;border-radius:999px;white-space:nowrap}
+.ok{background:#DDF5EA;color:#167A51}.bad{background:#FDE6E7;color:#C2343A}.warn{background:#FFF1D6;color:#9A6206}
+
+/* slide galeri (bukti) */
+.gtitle{position:absolute;left:64px;top:104px;font:800 50px/1.08 'Plus Jakarta Sans';letter-spacing:-1.8px;width:1150px}
+.gsub{position:absolute;left:66px;top:172px;font:500 21px/1.4 'Plus Jakarta Sans';color:var(--ink2);width:1100px}
+.foot{position:absolute;left:64px;bottom:30px;font:600 15px 'Plus Jakarta Sans';color:var(--muted)}
+table{border-collapse:collapse;width:100%}
+td,th{text-align:left;padding:11px 12px;font:500 17px 'Plus Jakarta Sans';border-bottom:1.5px solid #EEF0F4;vertical-align:middle}
+th{font:700 13px 'JetBrains Mono';letter-spacing:1px;color:var(--muted);text-transform:uppercase;border-bottom:2px solid #E5E8EF}
+tr:last-child td{border-bottom:0}
+.term{position:absolute;background:#1E1C26;color:#EFEAE4;border-radius:24px;overflow:hidden;
+  box-shadow:0 40px 70px -30px rgba(30,20,40,.55);font:500 17px/1.7 'JetBrains Mono'}
+.term .bar{height:44px;background:#2C2936;display:flex;align-items:center;gap:9px;padding:0 20px;color:#A39DB0;font-size:15px}
+.term .bar i{width:13px;height:13px;border-radius:50%;display:inline-block}
+.term pre{padding:16px 24px;font:inherit;white-space:pre}
+.g{color:#7EDDB2}.r{color:#FF8A78}.y{color:#FFCD6E}.d{color:#9A94A6}

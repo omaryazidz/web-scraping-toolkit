@@ -1,0 +1,98 @@
+<!doctype html><meta charset=utf-8>
+<!-- Gambar Fastwork (cover + galeri). Render: bash thumbnail/render.sh thumbnail -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Caveat:wght@700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel=stylesheet href="base.css">
+<style>
+:root{--accent:#0C8599;--bg:#EEF8F8;--blob1:#BCE7EC;--blob2:#FFE4D0;--ink:#13272C;--ink2:#2E454A;--muted:#5E7378;
+  --shadow:rgba(12,110,125,.42);--shadow2:rgba(12,110,125,.14);--chipb:#8FE3EC}
+.sheet td{font-size:15px;padding:9px 8px}.sheet th{padding:8px 8px;font-size:12px}
+.sheet td:first-child{font-weight:600;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.star{color:#E9A23B;letter-spacing:-1px}.star s{color:#D9DEE3;text-decoration:none}
+.win{display:flex;align-items:center;gap:8px;margin:-6px 0 12px}
+.win i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.stat{background:#fff;border-radius:24px;padding:20px 24px;box-shadow:0 30px 50px -28px var(--shadow)}
+.stat b{display:block;font:800 44px/1 'Plus Jakarta Sans';letter-spacing:-1.5px;color:var(--accent)}
+.stat span{display:block;font:600 16px/1.35 'Plus Jakarta Sans';color:var(--ink2);margin-top:8px}
+</style>
+
+<!-- 1. COVER -->
+<section class=slide data-name="cover">
+  <div class=eyebrow><i></i>Web Scraping &amp; Data Extraction</div>
+  <h1 style="font-size:84px">1.000 produk,<br>rapi di<br><em>Excel.<svg viewBox="0 0 300 26" preserveAspectRatio="none"><path d="M4 16 C60 4 120 6 170 12 S260 20 296 8" fill="none" stroke="#0C8599" stroke-width="7" stroke-linecap="round" opacity=".45"/></svg></em></h1>
+  <p class=sub style="top:448px">Saya ambil data dari website, bersihkan, lalu kirim sebagai Excel, CSV, atau JSON. <b>Sopan ke server, tidak gagal diam-diam.</b></p>
+  <p class=who>Untuk riset harga, katalog produk, listing, dan data publik lainnya.</p>
+
+  <div class=card style="left:672px;top:116px;width:548px;transform:rotate(1.5deg);padding:22px 22px 14px">
+    <div class=win><i style="background:#FF7A6B"></i><i style="background:#FFC857"></i><i style="background:#6FD39B"></i>
+      <span class=mono style="font-size:14px;color:var(--muted);margin-left:10px">books.csv · 1.000 baris</span></div>
+    <table class=sheet>
+      <tr><th>Judul</th><th>Kategori</th><th>Harga</th><th>Rating</th><th>Stok</th></tr>
+      <tr><td>10-Day Green Smoothie Cleanse</td><td>Health</td><td class=mono>£49.71</td><td class=star>★★★★★</td><td class=mono>10</td></tr>
+      <tr><td>10% Happier</td><td>Nonfiction</td><td class=mono>£24.57</td><td class=star>★★<s>★★★</s></td><td class=mono>10</td></tr>
+      <tr><td>1,000 Places to See Before You Die</td><td>Travel</td><td class=mono>£26.08</td><td class=star>★★★★★</td><td class=mono>1</td></tr>
+      <tr><td>11/22/63</td><td>Fiction</td><td class=mono>£48.48</td><td class=star>★★★<s>★★</s></td><td class=mono>11</td></tr>
+      <tr><td>13 Hours</td><td>Nonfiction</td><td class=mono>£27.06</td><td class=star>★<s>★★★★</s></td><td class=mono>13</td></tr>
+      <tr><td>1491: New Revelations</td><td>History</td><td class=mono>£21.80</td><td class=star>★★★<s>★★</s></td><td class=mono>14</td></tr>
+      <tr><td class=muted style="font-weight:500">… 994 baris lagi</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+  </div>
+  <div class=chip style="left:640px;top:590px;transform:rotate(-1.2deg)">
+    <svg width=24 height=24 viewBox="0 0 24 24" fill=none stroke="#8FE3EC" stroke-width=2.4 stroke-linecap=round stroke-linejoin=round><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>
+    Ambil ulang: <b>1 request, 8 detik</b></div>
+  <div class=badge style="left:1092px;top:500px"><b>0</b><span>gagal dari<br>1.000 produk</span></div>
+  <div class=note style="left:900px;top:40px;transform:rotate(-4deg)">harga &amp; stok sudah bersih!
+    <svg viewBox="0 0 60 90" style="left:118px;top:34px;width:54px;height:84px"><path d="M8 4 C30 18 36 42 30 80" fill=none stroke="#0C8599" stroke-width=3.5 stroke-linecap=round /><path d="M18 68 L30 82 L42 69" fill=none stroke="#0C8599" stroke-width=3.5 stroke-linecap=round stroke-linejoin=round /></svg></div>
+</section>
+
+<!-- 2. TAHAN GANGGUAN -->
+<section class=slide data-name="tahan-gangguan">
+  <div class=eyebrow><i></i>Web Scraping &amp; Data Extraction</div>
+  <p class=gtitle>Situsnya bermasalah, <em>datanya tetap benar.</em></p>
+  <p class=gsub>Diuji melawan server palsu yang sengaja dibuat rusak. Hasilnya bisa diulang, situs orang tidak tersentuh.</p>
+  <div class=card style="left:64px;top:236px;width:820px;padding:14px 26px">
+    <table>
+      <tr><th>Masalah di dunia nyata</th><th>Yang terjadi</th></tr>
+      <tr><td><b>robots.txt</b> melarang satu bagian</td><td><span class="pill ok">tidak pernah diambil</span></td></tr>
+      <tr><td>Server error 503 sementara</td><td><span class="pill ok">dicoba ulang, berhasil</span></td></tr>
+      <tr><td>Server minta tunggu (429 + Retry-After)</td><td><span class="pill ok">menunggu sesuai permintaan</span></td></tr>
+      <tr><td>Server tidak mengirim charset</td><td><span class="pill ok">£ tetap benar, bukan Â£</span></td></tr>
+      <tr><td><b>Situs mengubah tampilan HTML</b></td><td><span class="pill ok">berhenti, 0 data sampah</span></td></tr>
+      <tr><td>Produk muncul di dua halaman</td><td><span class="pill ok">diambil sekali</span></td></tr>
+      <tr><td>Harga naik sejak crawl lalu</td><td><span class="pill ok">tercatat di riwayat harga</span></td></tr>
+    </table>
+  </div>
+  <div class="stat abs" style="left:920px;top:232px;width:296px"><b>16/16</b><span>tes ketahanan lulus</span></div>
+  <div class="stat abs" style="left:920px;top:376px;width:296px"><b>12/12</b><span>bug yang sengaja ditanam ikut tertangkap tes</span></div>
+  <div class=note style="left:930px;top:540px;transform:rotate(-4deg);font-size:29px">bukan cuma “jalan<br>di laptop saya”</div>
+</section>
+
+<!-- 3. HASIL ASLI -->
+<section class=slide data-name="hasil-asli">
+  <div class=eyebrow><i></i>Web Scraping &amp; Data Extraction</div>
+  <p class=gtitle>Dicoba di situs sungguhan: <em>1.000 buku, 0 gagal.</em></p>
+  <p class=gsub>Target latihan books.toscrape.com. Pengambilan kedua memakai cache, jadi server tidak dibebani ulang.</p>
+  <div class=term style="left:64px;top:240px;width:560px">
+    <div class=bar><i style="background:#FF7A6B"></i><i style="background:#FFC857"></i><i style="background:#6FD39B"></i><span style="margin-left:10px">pengambilan pertama</span></div>
+<pre style="font-size:14.5px"><span class=y>== Ringkasan (1238.8 detik) ==</span>
+halaman daftar  : 50
+produk ditemukan: <span class=g>1000</span>  (baru 1000)
+request jaringan: 1051
+gagal/dilewati  : <span class=g>0</span>
+UPC ganda       : <span class=g>0</span></pre>
+  </div>
+  <div class=term style="left:656px;top:240px;width:560px">
+    <div class=bar><i style="background:#FF7A6B"></i><i style="background:#FFC857"></i><i style="background:#6FD39B"></i><span style="margin-left:10px">diambil ulang (cache)</span></div>
+<pre style="font-size:14.5px"><span class=y>== Ringkasan (8.4 detik) ==</span>
+halaman daftar  : 50
+produk ditemukan: <span class=g>1000</span>  (tetap 1000)
+request jaringan: <span class=g>1</span>  (dari cache 1050)
+gagal/dilewati  : <span class=g>0</span>
+UPC ganda       : <span class=g>0</span></pre>
+  </div>
+  <div class="stat abs" style="left:64px;top:500px;width:270px"><b>1.000</b><span>URL &amp; kode produk unik</span></div>
+  <div class="stat abs" style="left:356px;top:500px;width:270px"><b>50</b><span>kategori, kolom wajib tidak ada yang kosong</span></div>
+  <div class="stat abs" style="left:648px;top:500px;width:270px"><b>3</b><span>format siap pakai: Excel/CSV, JSON, SQLite</span></div>
+  <div class="stat abs" style="left:940px;top:500px;width:276px"><b>0,5 dtk</b><span>jeda sopan antar request</span></div>
+</section>
+
+<script>const i=+location.hash.slice(1)||1;document.querySelectorAll('.slide').forEach((s,k)=>s.hidden=k+1!==i)</script>
