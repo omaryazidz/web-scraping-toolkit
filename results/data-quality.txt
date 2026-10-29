@@ -1,0 +1,12 @@
+baris               : 1000
+URL unik / UPC unik : 1000 / 1000
+kolom wajib kosong  : tidak ada
+deskripsi kosong    : 2 (opsional, memang ada buku tanpa deskripsi)
+harga               : min 10.00, maks 59.99, rata-rata 35.07  (GBP)
+rating              : {1: 226, 2: 196, 3: 203, 4: 179, 5: 196}
+kategori            : 50 kategori, terbanyak: [('Default', 152), ('Nonfiction', 110), ('Sequential Art', 75)]
+stok                : 1000 tersedia, 0 habis
+tanda encoding rusak: 1 baris -> contoh: ['Meternity']
+catatan             : 1 baris di atas ("Meternity") berasal dari SUMBER, bukan dari scraper. Byte mentah dari server
+                      sudah berisi teks yang rusak sebelum diunduh (c3 a2 e2 82 ac = "â€" hasil double-encoding oleh
+                      pemilik situs, seharusnya tanda pisah "—"). Scraper mendecode byte itu dengan benar.

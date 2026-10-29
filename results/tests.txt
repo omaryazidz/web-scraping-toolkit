@@ -1,0 +1,17 @@
+  [PASS] Crawl 3 halaman -> 12 buku tersimpan; harga Decimal, rating angka, stok, kategori, UPC benar
+  [PASS] Server tanpa header charset -> simbol mata uang tetap terbaca benar (bukan mojibake), tidak ada harga gagal
+  [PASS] robots.txt melarang /catalogue/book-2/ -> tidak pernah di-request, dilaporkan sebagai blocked
+  [PASS] robots.txt meminta Crawl-delay 3 detik -> fetcher menunggu minimal 3 detik antar request
+  [PASS] Delay 1 detik -> setiap request setelah yang pertama didahului jeda 1 detik
+  [PASS] Server error 503 dua kali lalu pulih -> dicoba ulang otomatis, buku tetap tersimpan
+  [PASS] Server membalas 429 dengan Retry-After 7 -> fetcher menunggu 7 detik, bukan menebak
+  [PASS] Satu buku 503 terus -> dicatat sebagai gagal setelah percobaan habis, 11 buku lain tetap masuk
+  [PASS] Produk 404 -> langsung dicatat gagal, tidak diulang
+  [PASS] Harga 'abc' pada satu produk -> produk itu dicatat tidak valid, 11 lainnya tersimpan
+  [PASS] Situs mengubah HTML -> berhenti setelah 3 kegagalan beruntun dengan pesan jelas, 0 data sampah
+  [PASS] Buku tanpa deskripsi tetap diterima (field opsional)
+  [PASS] Buku #1 muncul lagi di halaman 2 -> hanya 1 request detail dan 1 baris data
+  [PASS] Crawl kedua memakai cache -> 0 request ke halaman (hanya robots.txt dicek ulang), hasil sama
+  [PASS] Harga buku #1 naik antar crawl -> status 'changed' dan riwayat harga berisi 2 catatan
+  [PASS] Deskripsi berisi koma, tanda kutip, dan baris baru -> CSV tetap utuh saat dibaca kembali
+== Hasil: 16/16 lulus ==
